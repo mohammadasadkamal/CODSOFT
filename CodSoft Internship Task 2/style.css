@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #f3ebeb;
+  line-height: 1.6;
+}
+
+.top-bar {
+  background: #043b59;
+  color: white;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.navbar {
+  background: rgba(223, 222, 222, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #eae6e3;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.quote-btn {
+  background: #ff6600;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.hero {
+  background: url('https://i.imgur.com/xTPn6Tz.jpg') no-repeat center/cover;
+  height: 80vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-btn {
+  background: #ff6600;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  background: white;
+}
+
+.about-content {
+  max-width: 50%;
+}
+
+.about-content h3 {
+  font-size: 2rem;
+  color: #043b59;
+  margin-bottom: 1rem;
+}
+
+.about-content ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.about-content li {
+  margin-bottom: 0.5rem;
+}
+
+.about-img {
+  position: relative;
+}
+
+.about-img img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+  background: #ff6600;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background: #043b59;
+  color: white;
+  text-align: center;
+}
+
+.stat-box {
+  font-size: 1.5rem;
+}
+
+.stat-box span {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.services {
+  padding: 3rem 2rem;
+  background: #f5f7fa;
+  text-align: center;
+}
+
+.services h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #043b59;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgb(230, 108, 9);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  max-width: 300px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.card h4 {
+  color: #760707;
+  margin-bottom: 0.5rem;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(236, 233, 233, 0.95);
+    backdrop-filter: blur(8px);
+    display: none;
+    padding: 1rem 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .quote-btn.desktop-btn {
+    display: none;
+  }
+
+  .quote-btn.mobile-btn {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
