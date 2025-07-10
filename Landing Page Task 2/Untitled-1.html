@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Company Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1f4037, #99f2c8);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1f4037;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #1f4037;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #0f766e;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .services, .about, .contact {
+      margin-top: 2rem;
+    }
+
+    .services h2, .about h2, .contact h2 {
+      color: #1f4037;
+      margin-bottom: 1rem;
+    }
+
+    .footer {
+      background: #1f4037;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MAKGen IT Solutions</h1>
+    <p>Innovating Your Digital Future</p>
+  </header>
+
+  <nav>
+    <div class="logo">MAK</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <div>
+      <h1>Empowering Businesses with Cutting-Edge Technology</h1>
+      <p>We deliver innovative and scalable digital solutions tailored to your business needs.</p>
+    </div>
+  </section>
+
+  <section class="section services" id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Web Development & Design</li>
+      <li>Cloud Infrastructure & DevOps</li>
+      <li>AI & Machine Learning Integration</li>
+      <li>Mobile Application Development</li>
+      <li>Cybersecurity Solutions</li>
+    </ul>
+  </section>
+
+  <section class="section about" id="about">
+    <h2>About Us</h2>
+    <p>MAKGen IT Solutions is a leading provider of technology consulting and digital transformation services. With a global team of professionals, we empower businesses to harness the power of innovation.</p>
+    <p>Our core mission is to guide organizations through their digital evolution, leveraging emerging technologies to streamline operations and drive growth.</p>
+    <p>We specialize in tailored software development, robust cloud solutions, AI-driven systems, and next-generation IT infrastructure management.</p>
+    <p>MAKGen IT Solutions supports enterprises from strategy through execution, ensuring scalable and secure implementation at every step.</p>
+    <p>Our consultants work closely with clients to align technology roadmaps with business goals, unlocking long-term value and sustainability.</p>
+    <p>We embrace agility, adopting flexible methodologies and tools to adapt to fast-changing business needs and customer demands.</p>
+    <p>Through continuous innovation and client-centric design, MAKGen IT Solutions delivers tangible results and measurable ROI.</p>
+    <p>Our solutions span industries including finance, healthcare, retail, and manufacturing, with deep domain expertise and cross-functional insight.</p>
+    <p>Security, performance, and reliability are at the foundation of every solution we provide, backed by 24/7 support and proactive monitoring.</p>
+    <p>With MAKGen IT Solutions, clients are equipped not only to compete, but to lead in a digital-first world driven by intelligence and automation.</p>
+  
+
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@makgen.com</p>
+    <p>Phone: +91 9876543210</p>
+    <p>Location: Bangalore, India</p>
+  </section>
+
+ <section class="section" id="business-model">
+  <h2 style="text-align:left; color: #2c5364; margin-bottom: 2rem;">Customer Services</h2>
+  <div style="max-width: 1000px; margin: auto; background: #ffffff; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <form style="display: flex; flex-direction: column; gap: 1.5rem;">
+      <div>
+        <label for="industry" style="font-weight: 600; color: #333;">Select Industry Segment:</label>
+        <select id="industry" name="industry" style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 10px;">
+          <option value="startup">Startup</option>
+          <option value="sme">Small/Medium Business</option>
+          <option value="enterprise">Enterprise / Corporate</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="services" style="font-weight: 600; color: #333;">Interested Services:</label>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+          <label><input type="checkbox" name="services" value="webdev" /> Web Development</label>
+          <label><input type="checkbox" name="services" value="cloud" /> Cloud Infrastructure</label>
+          <label><input type="checkbox" name="services" value="ai" /> AI & Machine Learning</label>
+          <label><input type="checkbox" name="services" value="mobile" /> Mobile Applications</label>
+          <label><input type="checkbox" name="services" value="cybersecurity" /> Cybersecurity</label>
+        </div>
+      </div>
+
+      <div>
+        <label for="engagement" style="font-weight: 600; color: #333;">Preferred Engagement Model:</label>
+        <select id="engagement" name="engagement" style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 10px;">
+          <option value="project">Project-Based</option>
+          <option value="retainer">Monthly Retainer</option>
+          <option value="saas">SaaS Subscription</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="goals" style="font-weight: 600; color: #333;">Your Business Goals:</label>
+        <textarea id="goals" name="goals" rows="4" placeholder="Describe your needs..." style="width: 100%; padding: 1rem; border-radius: 10px; border: 1px solid #ccc;"></textarea>
+      </div>
+
+      <button type="submit" style="padding: 1rem; background: linear-gradient(to right, #0052d4, #4364f7); border: none; border-radius: 10px; color: white; font-weight: bold; font-size: 1rem; cursor: pointer;">
+        Submit Request
+      </button>
+    </form>
+  </div>
+</section>
+<footer class="footer">
+    &copy; 2025 MAKGen IT Solutions. All rights reserved.
+  </footer>
+</body>
+</html>
